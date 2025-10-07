@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Văn Bá Phát Huy — Portfolio</title>
+  <meta name="description" content="Portfolio hiện đại của Văn Bá Phát Huy · Flutter / C# / Web" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme="dark">
+  <canvas id="snow-canvas"></canvas>
+
+  <!-- ===== Sidebar (left, fixed) ===== -->
+  <aside class="sidebar">
+    <div class="side-inner">
+      <div class="avatar-wrap">
+        <img class="avatar" src="assets/Avatar.jpg" alt="Avatar" />
+        <div class="ring"></div>
+      </div>
+
+      <h1 class="name">Văn Bá Phát Huy</h1>
+      <div class="badge live"><span class="dot"></span> Thực tập sinh sắp tốt nghiệp</div>
+
+      <p class="about">
+        Khoá <strong>2022–2026</strong>. Tập trung <strong>Mobile</strong> (Flutter + Java),
+        bổ trợ <strong>C#</strong> Desktop và <strong>Web</strong> cơ bản.
+      </p>
+
+      <div class="socials">
+        <a class="btn ghost" href="https://github.com/Huy2004P" target="_blank">GitHub</a>
+        <!-- <a class="btn ghost" href="#" target="_blank">LinkedIn</a> -->
+        <a class="btn ghost" href="mailto:you@example.com">Email</a>
+        <a class="btn primary" id="resumeLink" href="#" target="_blank">Tải CV</a>
+      </div>
+
+      <nav class="side-nav">
+        <a href="#projects">Dự án</a>
+        <a href="#skills">Kỹ năng</a>
+        <a href="#experience">Kinh nghiệm</a>
+        <a href="#contact">Liên hệ</a>
+      </nav>
+
+      <button id="themeToggle" class="btn tiny">Light</button>
+      <footer class="side-foot">© <span id="year"></span> Huy</footer>
+    </div>
+  </aside>
+
+  <!-- ===== Main content (right, scroll) ===== -->
+  <main class="content">
+    <!-- Hero banner (compact) -->
+    <section class="hero-card">
+      <h2>Student Software Engineer · Flutter / C# / Web</h2>
+      <p>
+        Mình yêu thích phát triển ứng dụng thực tế với UI mượt và code dễ bảo trì.
+        Tập trung <strong>Mobile</strong> (Flutter + Java), nắm vững C# WinForms/SQL Server và Web cơ bản.
+      </p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="section-head">
+        <h3>Dự án</h3>
+        <div class="filters">
+          <button class="chip is-active" data-filter="all">Tất cả</button>
+          <button class="chip" data-filter="mobile">Mobile</button>
+          <button class="chip" data-filter="desktop">C#</button>
+          <button class="chip" data-filter="web">Web</button>
+        </div>
+      </div>
+      <div id="projects-container" class="grid3"></div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <h3>Kỹ năng</h3>
+      <div id="skills-container" class="skills-grid">
+        <!-- render bằng JS -->
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <h3>Kinh nghiệm & Học tập</h3>
+      <ol id="experience-timeline" class="timeline"></ol>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+  <div class="contact-card card">
+    <div class="contact-head">
+      <span class="contact-emoji">📬</span>
+      <h3>Gửi tin nhắn cho mình</h3>
+    </div>
+
+    <div class="contact-split">
+      <!-- Form liên hệ đẹp gọn (giữ id=mailForm để JS cũ hoạt động) -->
+      <form id="mailForm" class="contact-form">
+        <div class="field">
+          <label for="name">Tên</label>
+          <input id="name" name="name" type="text" placeholder="Nguyễn Văn A" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="a@example.com" required>
+        </div>
+        <div class="field">
+          <label for="topic">Chủ đề</label>
+          <input id="topic" name="topic" type="text" placeholder="Cơ hội thực tập / Trao đổi">
+        </div>
+        <div class="field">
+          <label for="message">Nội dung</label>
+          <textarea id="message" name="message" rows="5" placeholder="Viết lời nhắn..." required></textarea>
+        </div>
+
+        <button class="btn primary" type="submit">Gửi mail</button>
+        <p class="note">* Form này sẽ mở ứng dụng mail mặc định.</p>
+      </form>
+
+      <!-- Box nhỏ với GitHub / LinkedIn / Email -->
+      <aside class="contact-info">
+        <h4>Kênh liên hệ nhanh</h4>
+        <p class="muted">Mời anh/chị liên hệ qua email hoặc LinkedIn. Mình phản hồi rất nhanh.</p>
+
+        <div class="info-links">
+          <a class="info-link" href="https://github.com/Huy2004P" target="_blank" rel="noopener">
+            <span class="dot-badge"></span> GitHub
+          </a>
+          <!-- <a class="info-link" href="#" target="_blank" rel="noopener">
+            <span class="dot-badge"></span> LinkedIn
+          </a> -->
+          <a class="info-link" href="mailto:you@example.com">
+            <span class="dot-badge"></span> Email
+          </a>
+        </div>
+
+        <div class="mini-card">
+          <p class="mini-title">Tip</p>
+          <p class="mini-text">Gửi kèm JD hoặc yêu cầu công việc để mình trả lời đúng trọng tâm nha.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+
+    <footer class="main-foot">Build with HTML + CSS + JS</footer>
+  </main>
+
+  <script src="scripts.js"></script>
+  
+</body>
+</html>

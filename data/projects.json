@@ -1,0 +1,13 @@
+{
+  "_comment": "Dưới đây là danh sách các dự án hiển thị trên portfolio",
+  "projects": [
+    {
+      "title": "Todo App",
+      "description": "Quản lý công việc gọn nhẹ bằng Flutter + local storage.",
+      "tags": ["Flutter", "Provider", "Local Storage"],
+      "source": "https://github.com/Huy2004P/todo-app",
+      "demo": "https://huy2004p.github.io/todo-app/",
+      "image": "assets/img/todo-thumb.png"
+    }
+  ]
+}

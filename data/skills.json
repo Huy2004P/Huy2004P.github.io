@@ -1,0 +1,33 @@
+[
+  {
+    "title": "📱 Kỹ năng chính – Mobile (Flutter + Java)",
+    "items": [
+      "Dart / Flutter",
+      "Java (Android)",
+      "UI/UX cho mobile",
+      { "text": "State Management", "level": "basic" },
+      { "text": "REST API", "level": "basic" },
+      { "text": "Firebase cơ bản", "level": "basic" }
+    ]
+  },
+  {
+    "title": "💻 Bổ trợ – C# Desktop",
+    "items": [
+      "C# WinForms",
+      "SQL Server",
+      "Entity Framework",
+      { "text": "ADO.NET", "level": "basic" },
+      { "text": "Clean Architecture", "level": "basic" }
+    ]
+  },
+  {
+    "title": "🌐 Cơ bản – Web",
+    "items": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      { "text": "Responsive Layout", "level": "basic" },
+      "GitHub Pages"
+    ]
+  }
+]
