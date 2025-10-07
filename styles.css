@@ -234,6 +234,20 @@ body::after{right:-6vw;background:radial-gradient(50% 60% at 60% 50%, var(--acce
 
 
 /* responsive */
+@media (max-width: 900px){
+  .sidebar{position:static;width:auto;border-right:0}
+  .side-inner{display:grid;grid-template-columns:80px 1fr;align-items:center}
+  .side-nav{display:none}
+  .socials{justify-content:flex-start}
+  .content{margin-left:0}
+  .grid3{grid-template-columns:1fr 1fr}
+  .skills-grid{grid-template-columns:1fr}
+  .contact-split{ grid-template-columns:1fr; }
+}
+@media (max-width: 600px){
+  .grid3{grid-template-columns:1fr}
+}
+
 /* ======= MOBILE FIX (<= 900px) ======= */
 @media (max-width: 900px){
 
@@ -279,6 +293,3 @@ body::after{right:-6vw;background:radial-gradient(50% 60% at 60% 50%, var(--acce
   .socials{ grid-template-columns: 1fr }  /* mỗi nút 1 hàng cho rộng */
 }
 
-@media (max-width: 600px){
-  .grid3{grid-template-columns:1fr}
-}
