@@ -232,6 +232,7 @@ body::after{right:-6vw;background:radial-gradient(50% 60% at 60% 50%, var(--acce
   border-color: color-mix(in oklab, var(--accent), transparent 55%);
 }
 
+.site-footer{padding:40px 0;text-align:center;color:var(--muted);border-top:1px solid var(--border)}
 
 /* ======= MOBILE FIX (<= 900px) ======= */
 @media (max-width: 900px){
