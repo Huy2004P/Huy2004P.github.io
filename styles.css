@@ -234,16 +234,51 @@ body::after{right:-6vw;background:radial-gradient(50% 60% at 60% 50%, var(--acce
 
 
 /* responsive */
+/* ======= MOBILE FIX (<= 900px) ======= */
 @media (max-width: 900px){
-  .sidebar{position:static;width:auto;border-right:0}
-  .side-inner{display:grid;grid-template-columns:80px 1fr;align-items:center}
-  .side-nav{display:none}
-  .socials{justify-content:flex-start}
-  .content{margin-left:0}
-  .grid3{grid-template-columns:1fr 1fr}
-  .skills-grid{grid-template-columns:1fr}
-  .contact-split{ grid-template-columns:1fr; }
+
+  /* Xếp dọc toàn bộ phần sidebar, tránh ép chiều ngang */
+  .sidebar{ position: static; width: auto; border-right: 0 }
+  .side-inner{
+    display: grid;
+    grid-template-columns: 1fr;   /* <-- 1 cột thay vì 80px 1fr */
+    align-items: start;
+    gap: 14px;                    /* tăng khoảng cách để không chạm nhau */
+    padding: 18px;
+  }
+
+  /* Avatar gọn lại + cách dưới một chút */
+  .avatar-wrap{ width: 84px; height: 84px; margin: 4px 0 6px }
+  .ring{ filter: blur(14px); inset: -8px }  /* glow dịu hơn, tránh tràn lên text */
+
+  /* Tên và badge xuống dòng, không bị ép hẹp dựng đứng */
+  .name{ font-size: 26px; line-height: 1.2; margin: 6px 0 2px }
+  .badge{ width: fit-content; margin: 4px 0 }   /* không chiếm cột riêng */
+  .about{ margin-bottom: 6px }
+
+  /* Nhóm nút: grid 2 cột; CV giãn 2 cột để không đè lên nhau */
+  .socials{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    width: 100%;
+  }
+  .socials .btn{ width: 100%; justify-content: center }
+  .socials .btn.primary{ grid-column: span 2 } /* nút Tải CV chiếm hàng riêng */
+
+  /* Nút đổi theme xuống dưới, full width cho dễ bấm */
+  #themeToggle{ width: 100%; justify-content: center }
+
+  /* Nội dung chính không bị dính sát viền khi sidebar thành header */
+  .content{ margin-left: 0 }
 }
+
+/* Màn rất nhỏ */
+@media (max-width: 420px){
+  .name{ font-size: 24px }
+  .socials{ grid-template-columns: 1fr }  /* mỗi nút 1 hàng cho rộng */
+}
+
 @media (max-width: 600px){
   .grid3{grid-template-columns:1fr}
 }
