@@ -130,3 +130,24 @@ function updateSnow(){
   });
 }
 drawSnow();
+
+const music = document.getElementById('bg-music');
+  const toggleBtn = document.getElementById('musicToggle');
+
+  let isPlaying = false;
+
+  toggleBtn.addEventListener('click', async () => {
+    try {
+      if (!isPlaying) {
+        await music.play();
+        isPlaying = true;
+        toggleBtn.textContent = '🔇';  // Biểu tượng khi đang phát
+      } else {
+        music.pause();
+        isPlaying = false;
+        toggleBtn.textContent = '🎵';  // Biểu tượng khi tắt
+      }
+    } catch (err) {
+      console.log('Không thể phát nhạc tự động:', err);
+    }
+  });
